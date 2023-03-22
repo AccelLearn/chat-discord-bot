@@ -1,0 +1,46 @@
+{
+  "name": "chatgpt-bot",
+  "type": "module",
+  "description": "A chatGPT 🤖 for discord.",
+  "author": "Konv Suu <2583695112@qq.com>",
+  "license": "MIT",
+  "keywords": [
+    "typescript",
+    "discord",
+    "chatGPT"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "unbuild --stub",
+    "build": "unbuild",
+    "test": "vitest",
+    "play": "node dist/index.cjs"
+  },
+  "dependencies": {
+    "discord.js": "^14.8.0",
+    "dotenv": "^16.0.3",
+    "fast-glob": "^3.2.12"
+  },
+  "devDependencies": {
+    "@kovsu/eslint-config-ts": "^0.2.0",
+    "eslint": "^8.36.0",
+    "typescript": "^4.9.3",
+    "unbuild": "^1.0.1",
+    "vitest": "^0.25.3"
+  },
+  "eslintConfig": {
+    "extends": "@kovsu/eslint-config-ts"
+  }
+}
